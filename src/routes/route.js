@@ -2,43 +2,18 @@ const express = require('express');
 
 const router = express.Router();
 
-const userController = require('../controllers/userController')
-
 const bookController = require('../controllers/bookController')
 
-const reviewController = require('../controllers/reviewController')
+router.post('/book', bookController.createBooks)
 
-const {authentication,authorisation} = require('../middleware/middleware')
+router.get('/book/:bookId', bookController.getBookById)
 
+router.put('/book/:bookId', bookController.updateBooks)
 
+router.delete('/book/:bookId', bookController.deleteBook)
 
-router.post('/register', userController.createUser)
-
-router.post('/login', userController.userlogin)
-
-
-router.post('/books',authentication, authorisation, bookController.createBooks)
-
-router.get('/books', authentication,bookController.getBooksByQuery)
-
-router.get('/books/:bookId',authentication,bookController.getBookById)
-
-router.put('/books/:bookId' ,authentication,authorisation, bookController.updateBooks)
-
-router.delete('/books/:bookId',authentication,authorisation, bookController.deleteBook)
-
-router.post('/books/:bookId/review', reviewController.createReview)
-
-router.put('/books/:bookId/review/:reviewId' , reviewController.updateReview)
-
-router.delete('/books/:bookId/review/:reviewId',reviewController.deleteReview)
-
-
-
-
-router.all("/**",  (req, res) => {
+router.all("/**", (req, res) => {
     return res.status(400).send({ status: false, msg: "The api you request is not available" })
 });
-
 
 module.exports = router

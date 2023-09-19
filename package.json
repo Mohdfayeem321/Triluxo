@@ -1,5 +1,5 @@
 {
-  "name": "project-booksmanagementgroup22",
+  "name": "Triluxo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,18 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mohdfayeem321/project-booksManagementGroup22.git"
+    "url": "git+https://github.com/Mohdfayeem321/Triluxo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mohdfayeem321/project-booksManagementGroup22/issues"
+    "url": "https://github.com/Mohdfayeem321/Triluxo/issues"
   },
-  "homepage": "https://github.com/Mohdfayeem321/project-booksManagementGroup22#readme",
+  "homepage": "https://github.com/Mohdfayeem321/Triluxo#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "expres": "^0.0.5",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
